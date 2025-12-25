@@ -20,7 +20,7 @@ table t1
 		annotation SummarizationSetBy = Automatic
 
 	partition t1 = m
-		mode: directQuery
+		mode: import
 		source =
 				let
 				    Source = Sql.Databases("tfoewh5cma3exbytwgzjjvcgey-umjso3y7oolevpgjiuehs73jmy.datawarehouse.fabric.microsoft.com"),
