@@ -1,0 +1,33 @@
+table t1
+	lineageTag: 4e7cce36-d439-4045-914a-4c1340fe3c89
+
+	column col1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b78ab50-a78a-448b-874c-4c8671552df5
+		summarizeBy: none
+		sourceColumn: col1
+
+		annotation SummarizationSetBy = Automatic
+
+	column col2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 79816a89-d436-4e8d-9f21-b78653561edf
+		summarizeBy: none
+		sourceColumn: col2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition t1 = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("tfoewh5cma3exbytwgzjjvcgey-umjso3y7oolevpgjiuehs73jmy.datawarehouse.fabric.microsoft.com"),
+				    LH1 = Source{[Name="LH1"]}[Data],
+				    dbo_t1 = LH1{[Schema="dbo",Item="t1"]}[Data]
+				in
+				    dbo_t1
+
+	annotation PBI_ResultType = Table
+

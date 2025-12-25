@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "3e99036255a4a5f482cf",
   "position": {
-    "x": 313.70319961244786,
-    "y": 124.7253685206118,
+    "x": 340.16009596530489,
+    "y": 224.88361899928489,
     "z": 0,
-    "height": 279.68719001591734,
-    "width": 279.68719001591734,
+    "height": 306.14408636877437,
+    "width": 470.55479941867173,
     "tabOrder": 0
   },
   "visual": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Table"
+                      "Entity": "t1"
                     }
                   },
-                  "Property": "Column1"
+                  "Property": "col1"
                 }
               },
-              "queryRef": "Table.Column1",
-              "nativeQueryRef": "Column1"
+              "queryRef": "t1.col1",
+              "nativeQueryRef": "col1"
             },
             {
               "field": {
@@ -36,17 +36,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Table"
+                          "Entity": "t1"
                         }
                       },
-                      "Property": "Column2"
+                      "Property": "col2"
                     }
                   },
-                  "Function": 0
+                  "Function": 5
                 }
               },
-              "queryRef": "Sum(Table.Column2)",
-              "nativeQueryRef": "Sum of Column2"
+              "queryRef": "t1.col2",
+              "nativeQueryRef": "Count of col2"
             }
           ]
         }
@@ -57,34 +57,34 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "677b485cafe67da6d953",
+        "name": "0ab7b019dfd1dab0f76e",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Table"
+                "Entity": "t1"
               }
             },
-            "Property": "Column1"
+            "Property": "col1"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "1e2b26aa3cf8503a5d28",
+        "name": "3035dccbaf7466b188d8",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Table"
+                    "Entity": "t1"
                   }
                 },
-                "Property": "Column2"
+                "Property": "col2"
               }
             },
-            "Function": 0
+            "Function": 5
           }
         },
         "type": "Advanced"
