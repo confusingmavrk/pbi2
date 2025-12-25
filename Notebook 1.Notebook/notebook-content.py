@@ -11,7 +11,9 @@
 
 # CELL ********************
 
-##my NB1NB_32
+# Welcome to your new notebook
+# Type here in the cell editor to add code!
+print("github_41")
 
 # METADATA ********************
 
